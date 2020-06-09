@@ -73,3 +73,20 @@ puts "For loop | Hardly used"
 for i in 0..2 # range data type
 	puts i
 end
+
+#Methods
+def add(one, two)
+	one + two
+end
+puts "Using methods to add two numbers"
+puts add(4,3)
+
+# Splat
+puts "Using splat"
+def max(one_param, *numbers, another)
+	# Variable length parameters passed
+	# becomes an array
+	# can be the middle parameter, not just the last.
+	numbers.max
+end
+puts max("something", 7,32,-3, "more")
