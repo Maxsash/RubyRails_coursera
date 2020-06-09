@@ -109,3 +109,20 @@ end
 # another explicit way to do the same. 
 # use (&block_name) as possible block argument.
 # then check block_name.nil
+
+# Files
+puts "Using File: test.txt"
+# Exception handling
+# alternate: File.exist?
+begin
+	File.foreach('test.txt') do |line|
+		puts line
+		p line #shows newline character
+		p line.chomp #chomps off the \n character
+		p line.split #array of words in line
+	end
+
+rescue Exception => e
+		puts e.message
+		puts "Let's pretend this didn't happen.."
+end
