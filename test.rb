@@ -90,3 +90,22 @@ def max(one_param, *numbers, another)
 	numbers.max
 end
 puts max("something", 7,32,-3, "more")
+
+# Blocks
+puts "Using Blocks"
+index = 3
+# the parameter passed as argument inside || is optional
+2.times do |index|
+	if index > 0
+		puts index
+	end
+end
+
+# another way to do the same thing as above
+2.times { |index| puts index if index > 0 }
+
+# use block_given? inside a method to check if it was passed as parameter.
+# use yield or block_name.call inside a method to call the block
+# another explicit way to do the same. 
+# use (&block_name) as possible block argument.
+# then check block_name.nil
