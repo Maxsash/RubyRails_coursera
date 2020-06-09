@@ -29,7 +29,7 @@ end
 # Until
 puts "Using until a>=5"
 until a >=5
-	puts a
+    puts a
 	a += 1
 end
 
@@ -48,3 +48,28 @@ puts "nil is false" if not nil
 
 # Triple equal
 puts "21 is an Integer" if Integer === 21
+
+# CASE has two flavors
+# first flavor
+age = 21
+case
+	when age >= 21
+		puts "This is the first case flavor"
+	when 1 == 0
+		puts "Written by a drink programmer"
+	else
+		puts "Default condition"
+end
+
+#second flavor
+name = 'Fisher'
+case name
+	when /fish/i then puts "This is the second case flavor"
+	when 'Smith' then puts "Your name is Smith but nobody cares"
+end
+
+# For loop
+puts "For loop | Hardly used"
+for i in 0..2 # range data type
+	puts i
+end
