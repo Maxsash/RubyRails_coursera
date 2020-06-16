@@ -96,6 +96,9 @@ class Solution
   #Implement the print_highest_word_frequency_across_lines() method to
   #* print the values of objects in highest_count_words_across_lines in the specified format
 	def print_highest_word_frequency_across_lines
-		p @highest_count_words_across_lines	
+		puts "The following words have the highest word frequency per line:"
+		@highest_count_words_across_lines.each do |element|
+			print "#{element.highest_wf_words} (appears in line #{element.line_number}\n"
+		end
 	end
 end
