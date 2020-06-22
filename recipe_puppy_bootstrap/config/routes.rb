@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+<<<<<<< HEAD
 	root :to => "recipes#index"
   get 'recipes/index'
   # The priority is based upon order of creation: first created -> highest priority.
@@ -55,4 +56,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+=======
+  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+>>>>>>> tmp
 end
