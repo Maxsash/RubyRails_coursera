@@ -1,4 +1,4 @@
-<h1>Recipes for '<%= @search %>'</h1>
+<h1>Recipes for <%= @search %></h1>
 
 <% if @recipes.empty? %>
 
@@ -10,13 +10,13 @@ No recipes found matching '<%= @search %>'
   <tr>
     <th>Photo</th>
     <th>Title</th>
-    <th>Social Rank</th>
+    <th>Ingredients</th>
   </tr>
   <% @recipes.each do |recipe| %>
     <tr>
-    <td><%= link_to image_tag(recipe["image_url"], width: 100, height: 100), recipe["f2f_url"] %></td>
+    <td><%= link_to image_tag(recipe["thumbnail"], width: 100, height: 100), recipe["f2f_url"] %></td>
     <td><%= link_to sanitize(recipe["title"]), recipe["f2f_url"] %></td>
-    <td><%= recipe["social_rank"] %></td>
+    <td><%= recipe["ingredients"] %></td>
     </tr>
   <% end %>
 </table>
